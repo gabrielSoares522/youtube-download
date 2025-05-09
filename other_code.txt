@@ -1,0 +1,12 @@
+import pytube
+
+link = input("Type the video link: ")
+
+yt = pytube.YouTube(link)
+print(yt)
+print("Downloading...")
+
+yt.streams.first().download()
+
+print("Streams: \n"+ streams)
+print("Download completed!")
